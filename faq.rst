@@ -105,7 +105,7 @@ According to `section 3 of RFC 7115 <https://tools.ietf.org/html/rfc7115#section
 What if the RPKI system becomes unavailable or some other catastrophe occurs, will my (signed) prefixes become unreachable to others? Will other prefixes my routers learned over BGP become unreachable for me?
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-RPKI provides a positive statement on routing intent. If all RPKI validator instances become unavailable and all certificates and ROAs expire, the validity state of all routes will fall back to NotFound, as if RPKI were never used. Routes with this state should be accepted according to `section 5 of RFC 7115 <https://tools.ietf.org/html/rfc7115#section-5`_, as this state will unfortunately be true for the majority of routes. 
+RPKI provides a positive statement on routing intent. If all RPKI validator instances become unavailable and all certificates and ROAs expire, the validity state of all routes will fall back to NotFound, as if RPKI were never used. Routes with this state should be accepted according to `section 5 of RFC 7115 <https://tools.ietf.org/html/rfc7115#section-5>`_, as this state will unfortunately be true for the majority of routes. 
 
 What if the Validator I use crashes and my router stops getting a feed. What will happen to the prefixes I learn over BGP?
 --------------------------------------------------------------------------------------------------------------------------
