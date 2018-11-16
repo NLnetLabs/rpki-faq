@@ -56,7 +56,7 @@ In short, routes can have the state Valid, Invalid, or NotFound (a.k.a. Unknown)
 - Invalid: The prefix is announced from an unauthorised AS or the announcement is more specific than is allowed by the maximum length set in a ROA that matches the prefix and AS
 - NotFound: The prefix in this announcement is not covered (or only partially covered) by an existing ROA
 
-To understand how more specifics, less specifics and partial overlaps are treated, please refer to `section 2 of RFC 6811 <https://tools.ietf.org/html/rfc6811#section-2>_.
+To understand how more specifics, less specifics and partial overlaps are treated, please refer to `section 2 of RFC 6811 <https://tools.ietf.org/html/rfc6811#section-2>`_.
 
 I’ve heard the term "route leak" and "route hijack". What’s the difference?
 ---------------------------------------------------------------------------
