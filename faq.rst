@@ -61,7 +61,7 @@ To understand how more specifics, less specifics and partial overlaps are treate
 I’ve heard the term "route leak" and "route hijack". What’s the difference?
 ---------------------------------------------------------------------------
 
-A route leak is a propagation of on or more routing announcements that are beyond their intended scope. That is an announcement from an Autonomous System (AS) of a learned BGP route to another AS is in violation of the intended policies of the receiver, the sender, and/or one of the ASes along the preceding AS path.
+A route leak is a propagation of one or more routing announcements that are beyond their intended scope. That is an announcement from an Autonomous System (AS) of a learned BGP route to another AS is in violation of the intended policies of the receiver, the sender, and/or one of the ASes along the preceding AS path.
 
 A route hijack is the unauthorised origination of a route. 
 
