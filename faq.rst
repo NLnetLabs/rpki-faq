@@ -65,7 +65,7 @@ A route leak is a propagation of on or more routing announcements that are beyon
 
 A route hijack is the unauthorised origination of a route. 
 
-Note that in either case, the cause may be accidental or malicious and in either case, the result can be path detours, redirection, or denial of services. For more information, please refer to `RFC 7908 <https://tools.ietf.org/html/rfc7908>_.
+Note that in either case, the cause may be accidental or malicious and in either case, the result can be path detours, redirection, or denial of services. For more information, please refer to `RFC 7908 <https://tools.ietf.org/html/rfc7908>`_.
 
 If a ROA is cryptographically invalid, will it make my route invalid?
 ---------------------------------------------------------------------
@@ -84,6 +84,18 @@ Does RPKI reduce the BGP convergence speed of my routers?
 ---------------------------------------------------------
 
 No, filtering based on an RPKI validated cache has a negligible influence on convergence speed. RPKI validation happens in parallel with route learning (for new prefixes which aren’t yet in cache), and those prefixes will be marked as valid, invalid, or notfound (and the correct policy applied) as the information becomes available.
+
+Why do I need rsync on my system to use a validator?
+----------------------------------------------------
+
+In the original standards, rsync was defined as the main means of distribution of RPKI data. While it has served the system well in the early years, rsync has several downsides:
+
+- When RPKI relying party software is used on a client system, it has a dependency on rsync. Different versions and different supported options, such as ``--contimeout``, cause unpredictable results. Furthermore, calling rsync is inefficient. It's an additional process and the output can only be verified by scanning the disk.
+- Scaling becomes more and more problematic as the global RPKI data set grows and more operators download and validate data, as with rsync the server in involved in processing the differences.
+
+To overcome these limitations the RRDP protocol was developed and standardised in `RFC 8182 <https://tools.ietf.org/html/rfc8182>`_, which relies on HTTPS. RRDP was specifically designed for scaling and allows CDNs to participate in serving the RPKI data set globally, at scale. In addition, HTTPS is well supported in programming languages so development of relying party software becomes easier and more robust.
+
+Currently, RRDP is implemented on the server side by the RIPE NCC and APNIC. It is `considered as a work item <https://www.arin.net/participate/acsp/suggestions/2018-14.html>`_ for 2019 by ARIN. Most RPKI Validator implementations either already have RRDP support, or have it on the short term roadmap.
 
 The five RIRs provide a Hosted RPKI system, so why would I want to run a Delegated RPKI system myself instead?
 --------------------------------------------------------------------------------------------------------------
