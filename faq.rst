@@ -61,7 +61,11 @@ To understand how more specifics, less specifics and partial overlaps are treate
 I’ve heard the term "route leak" and "route hijack". What’s the difference?
 ---------------------------------------------------------------------------
 
-When you announce a prefix that isn’t yours, you have a “route leak”. When the originator of the invalid route has malicious intent (it tries to hijack prefixes of another network) it is called a “route hijack”. So, technically it is the same, but the reason why the route leak exists (accident or malicious intent) defines what you call it.
+A route leak is a propagation of on or more routing announcements that are beyond their intended scope. That is an announcement from an Autonomous System (AS) of a learned BGP route to another AS is in violation of the intended policies of the receiver, the sender, and/or one of the ASes along the preceding AS path.
+
+A route hijack is the unauthorised origination of a route. 
+
+Note that in either case, the cause may be accidental or malicious and in either case, the result can be path detours, redirection, or denial of services. For more information, please refer to `RFC 7908 <https://tools.ietf.org/html/rfc7908>_.
 
 If a ROA is cryptographically invalid, will it make my route invalid?
 ---------------------------------------------------------------------
