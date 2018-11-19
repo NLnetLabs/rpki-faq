@@ -143,6 +143,17 @@ Yes, signing your routes is always a good idea. Even if you don’t validate you
 Miscellaneous
 =============
 
+What is the global adoption and data quality of RPKI like?
+----------------------------------------------------------
+
+There are several initiatives that measure the adoption and data quality of RPKI:
+
+- `Global certificate and ROA statistics <http://certification-stats.ripe.net>`_, by RIPE NCC
+- `Global country statistics <https://lirportal.ripe.net/certification/content/static/statistics/world-roas.html>`_, by RIPE NCC
+- `Cirrus Certificate Transparency Log <https://ct.cloudflare.com/logs/cirrus>`_, by Cloudflare
+- `The RPKI Observatory <https://nusenu.github.io/RPKI-Observatory/>`_, by nusenu
+- `RPKI Deployment Monitor <https://rpki-monitor.antd.nist.gov>`_, by NIST
+
 Will RPKI be used as a censorship mechanism allowing governments to make arbitrary prefixes unroutable on a whim?
 -----------------------------------------------------------------------------------------------------------------
 
