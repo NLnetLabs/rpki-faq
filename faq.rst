@@ -27,7 +27,7 @@ The main weakness of the IRR is that it is not a globally deployed system and it
 Is it true that BGP4 is just not up to the task any longer?
 -----------------------------------------------------------
 
-Unfortunately it’s practically impossible to replace BGP right now, so we should fix what is broken.
+Unfortunately it’s practically impossible to replace BGP right now. We should, however, work on fixing the broken parts and improving the situation.
 
 As RPKI relies on X.509 PKI, isn’t this the same problem with untrustworthy SSL/TLS Certificate Authorities all over again?
 ---------------------------------------------------------------------------------------------------------------------------
