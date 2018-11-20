@@ -8,7 +8,7 @@ What is RPKI and why was it developed?
 
 The global routing system of the Internet consists of a number of functionally independent actors (Autonomous Systems) which use BGP (Border Gateway Protocol) to exchange routing information. The system is very dynamic and flexible by design. Connectivity and routing topologies are subject to change. Changes easily propagate globally within a few minutes. One weakness of this system is that these changes cannot be validated against information existing outside of the BGP protocol itself.
 
-RPKI is a way to express these relationships in an out-of-band system such that the information that is exchanged by the dynamic system can be validated to be correct within some bounds. The RPKI standards were developed by the IETF (Internet Engineering Task Force) to describe some resources of the Internet’s routing and addressing scheme in a cryptographic system where any member of the public can get access and validate their integrity using cryptographic methods.
+RPKI is a way to define data in an out-of-band system such that the information that are exchanged by BGP can be validated to be correct. The RPKI standards were developed by the IETF (Internet Engineering Task Force) to describe some of the resources of the Internet’s routing and addressing scheme in a cryptographic system. These information are public, and anyone can get access to validate their integrity using cryptographic methods.
 
 I thought we were all using the IRR to check route origin, why do we need RPKI now?
 -----------------------------------------------------------------------------------
