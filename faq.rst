@@ -154,6 +154,11 @@ There are several initiatives that measure the adoption and data quality of RPKI
 - `The RPKI Observatory <https://nusenu.github.io/RPKI-Observatory/>`_, by nusenu
 - `RPKI Deployment Monitor <https://rpki-monitor.antd.nist.gov>`_, by NIST
 
+I want to use the RPKI services from a specific RIR that I'm not currently a member of. Can I transfer my resources?
+--------------------------------------------------------------------------------------------------------------------
+
+The RPKI services that each RIR offers differ in conditions, terms of service, availability and usability. Most RIRs have a transfer policy that allow their members to transfer their resources from one RIR region to another. Organisations may wish to do this so that they bring all resources under one entity, simplifying management. Others may do this because they are are looking for a specific set of terms with regards to the holdership of their resources. Please check with your RIR for the possibilities and conditions for resource transfers.
+
 Will RPKI be used as a censorship mechanism allowing governments to make arbitrary prefixes unroutable on a whim?
 -----------------------------------------------------------------------------------------------------------------
 
